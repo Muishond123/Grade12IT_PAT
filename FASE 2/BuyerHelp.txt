@@ -1,0 +1,9 @@
+Welcome to "THE ECO SHOP"!
+
+Here you can choose from a wide variety of eco-friendly products. Each product has an "Eco Points" rating. You will get these eco points when buying a product and when you have 20 or more eco points assigned to your username you will get a discount on your next purchase!
+
+On the "Store" page you can choose products you like and add them to your personal digital cart.
+
+On the "Cart" page you will find all the items added in your cart. Remove items you do not want to buy immediately and then proceed to checkout so that your order can be processed and sent to you as early as possible.
+
+On the "Account" page you can find and edit all your personal information. If you decide to, you may delete your account on this page.

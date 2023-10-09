@@ -1,0 +1,18 @@
+program PAT_p;
+
+uses
+  Forms,
+  WELCOME_u in 'WELCOME_u.pas' {frmWelcome},
+  BUYER_u in 'BUYER_u.pas' {frmBuyer},
+  MANAGER_u in 'MANAGER_u.pas' {frmManager};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmWelcome, frmWelcome);
+  Application.CreateForm(TfrmBuyer, frmBuyer);
+  Application.CreateForm(TfrmManager, frmManager);
+  Application.Run;
+end.

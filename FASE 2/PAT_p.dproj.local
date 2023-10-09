@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/02/26 21:24:24.375.pas,C:\Users\User\Documents\RAD Studio\Projects\Unit1.pas=D:\GR 12 IT PAT\WELCOME_u.pas</Transaction>
+    <Transaction>2023/02/26 21:24:24.375.dfm,C:\Users\User\Documents\RAD Studio\Projects\Unit1.dfm=D:\GR 12 IT PAT\WELCOME_u.dfm</Transaction>
+    <Transaction>2023/02/26 21:24:30.524.dproj,C:\Users\User\Documents\RAD Studio\Projects\Project1.dproj=D:\GR 12 IT PAT\PAT_p.dproj</Transaction>
+    <Transaction>2023/03/27 18:08:12.007.pas,C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\Unit3.pas=C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\MANAGER_u.pas</Transaction>
+    <Transaction>2023/03/27 18:08:12.007.dfm,C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\Unit3.dfm=C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\MANAGER_u.dfm</Transaction>
+    <Transaction>2023/04/09 11:14:31.929.pas,C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\Unit1.pas=C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\DM_u.pas</Transaction>
+    <Transaction>2023/04/09 11:14:31.929.dfm,C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\Unit1.dfm=C:\Users\User\Desktop\Volkies\GR 12 IT PAT\FASE 2\DM_u.dfm</Transaction>
+    <Transaction>2023/06/28 19:40:08.722.pas,C:\Users\User\Desktop\Volkies\IT\IT GR 12\GR 12 IT PAT\FASE 2\Unit1.pas=C:\Users\User\Desktop\Volkies\IT\IT GR 12\GR 12 IT PAT\FASE 2\clsBuyer.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="BUYER_u.pas"/>
+    <File Path="BUYER_u.dfm"/>
+    <File Path="clsBuyer.pas"/>
+    <File Path="DM_u.pas"/>
+    <File Path="DM_u.dfm"/>
+    <File Path="MANAGER_u.pas"/>
+    <File Path="MANAGER_u.dfm"/>
+    <File Path="WELCOME_u.pas"/>
+    <File Path="WELCOME_u.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

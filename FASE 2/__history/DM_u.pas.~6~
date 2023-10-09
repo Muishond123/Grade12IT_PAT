@@ -1,0 +1,30 @@
+unit DM_u;
+
+interface
+
+uses
+  SysUtils, Classes, DB, ADODB;
+
+type
+  TDmShop = class(TDataModule)
+    conShop: TADOConnection;
+    qryShop: TADOQuery;
+    dsShop: TDataSource;
+    dsBuyer: TDataSource;
+    tblUser: TADOTable;
+    dsSales: TDataSource;
+    tblSales: TADOTable;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DmShop: TDmShop;
+
+implementation
+
+{$R *.dfm}
+
+end.

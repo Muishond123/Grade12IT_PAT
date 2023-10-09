@@ -1,0 +1,128 @@
+unit clsBuyer;
+
+interface
+
+uses
+    SysUtils, Math;                                                             //Spesifies the different Delphi units that this unit will be able to use
+type
+  TBuyer = class(TObject)                                                       //Spesifies what type of class this unit will be
+  private
+    fUsername : string;                                                         //Atribute to store the buyer's username
+    fPassword : String;                                                         //Attribute to store the buyer's password
+    fCartTotal : real;                                                          //Attribute to store the total amount of all the products in the buyer's cart
+    fEcoPoints : integer;                                                       //Attribute to store the total amount of eco points registered on the buyer's account
+    fPaymentMethod : string;                                                    //Attribute to store the buyer's payment method
+    fPaymentDetails : string;                                                   //Attribute to store the
+  public
+    constructor Create (sUsername, sPassword :string; iEcoPoints:integer) ;     //Constructor method to initialize the objBuyer
+
+    function GetUsername : string;                                              //Function that will return the buyer's username to the main form
+    function GetPassword : string;                                              //Function that will return the buyer's password to the main form
+    function GetCartTotal : real;                                               //Function that will return the total value of all the items in the buyer's cart to the main form
+    function GetEcoPoints : integer;                                            //Function that will return the buyer's total amount of eco points to the main form
+    function GetPaymentMethod : string;                                         //Function that will return the buyer's payment method to the main form
+    function GetPaymentDetails : string;                                        //Function that will return the buyer's payment details to the main form
+    function CalcDiscount : real;                                               //Function that will return the amount of discount the buyer will get to the main form
+    procedure SetPaymentMethod (sMethod:string);                                //Procedure that will recieve the payment method from the main program and save it as an attribute of the object
+    procedure SetPaymentDetails (sDetails:string);                              //Procedure that will recieve the payment details from the main program and save it as an attribute of the object
+    procedure SetCartTotal (rTotal:real) ;                                      //Procedure that will initialize a value to the fCartTotal attribute
+    function ToString : string;                                                 //Function that will return all the users' information in a neat and organised way
+    procedure SetNewUsername (sNewUsername:string) ;                            //Procedure that will recieve the changed username from the main program and save it as an attribute of the object
+    procedure SetNewPassword (sNewPassword:string);                             //Procedure that will recieve the changed password from the main program and save it as an attribute of the object
+    procedure IncEcoPoints (iIncBy:integer);                                    //Procedure that will recieve the amount of eco points that the user gets when buying new products from the main program and adds it to the EcoPoints attribute of the object
+    procedure SetEcoPoints(iEcoPoints:integer)  ;                                                    //Procedure that receives amount of eco points buyer has and gives the value to eco points attribute of buyer
+  end;
+
+
+implementation
+
+{ TBuyer }
+
+function TBuyer.CalcDiscount: real;
+begin
+if fEcoPoints>=20 then                                                          //If the buyer has 20 or more Eco Points:
+begin
+  Result:=0.15*fCartTotal;                                                      //Amount of discount that the buyer will recieve
+  fEcoPoints:= fEcoPoints-20;                                                   //The total amount of Eco Points the Buyer has should be reduced by 20
+  fCartTotal:=fCartTotal-0.15*fCartTotal;                                       //The cart's total value get decreased by 15% of it's worth
+end
+else
+Result:=0.00;
+
+end;
+
+constructor TBuyer.Create(sUsername, sPassword: string; iEcoPoints:integer) ;
+begin
+fUsername:=sUsername;                                                           //The username attribute gets the value of the username parrameter
+fPassword:=sPassword;                                                           //The password attribute gets the value of the password parrameter
+end;
+
+function TBuyer.GetCartTotal: real;
+begin
+Result:=fCartTotal;                                                             //The value of the CartTotal attribute is being sent to the main form
+end;
+
+function TBuyer.GetEcoPoints: integer;
+begin
+Result:=fEcoPoints;                                                             //The value of the EcoPoints attribute is being sent to the main form
+end;
+
+function TBuyer.GetPassword: string;
+begin
+Result:=fPassword;                                                              //The value of the Password attribute is being sent to the main form
+end;
+
+function TBuyer.GetPaymentDetails: string;
+begin
+result:=fPaymentDetails;
+end;
+
+function TBuyer.GetPaymentMethod: string;
+begin
+result:=fPaymentMethod;
+end;
+
+function TBuyer.GetUsername: string;
+begin
+Result:=fUsername;                                                              //The value of the Username attribute is being sent to the main form
+end;
+
+procedure TBuyer.IncEcoPoints(iIncBy: integer);
+begin
+fEcoPoints:=fEcoPoints+iIncBy;                                                  //Increases the EcoPoints attribute of the object by the amount of eco points the user gets when he/she buys products
+end;
+
+procedure TBuyer.SetCartTotal (rTotal:real);
+begin
+fCartTotal:=rTotal;                                                             //The CartTotal attribute gets the value of the Total variable in the main program
+end;
+
+procedure TBuyer.SetNewPassword(sNewPassword: string);
+begin
+fPassword:=sNewPassword;
+end;
+
+procedure TBuyer.SetNewUsername(sNewUsername: string);
+begin
+fUsername:=sNewUsername;
+end;
+
+procedure TBuyer.SetPaymentDetails(sDetails: string);
+begin
+fPaymentDetails:=sDetails;                                                      //The PaymentDetails attribute receies the value of the string variable in the main application
+end;
+
+procedure TBuyer.SetPaymentMethod(sMethod: string);
+begin
+fPaymentMethod:=sMethod;                                                        //The PaymentMethod attribute receies the value of the string variable in the main application
+end;
+
+function TBuyer.ToString: string;
+begin
+Result:='Username: '+ #9#9#9  + fUsername + #13 + 'Password: ' + #9#9#9+        //Function send a string to the main prorgam wich it can display on the info label on the tbsAccount
+fPassword + #13 + 'Amount of eco points: ' + #9#9 + IntToStr(fEcoPoints) + #13+
+'Method of Payment: ' + #9 +#9+ fPaymentMethod + #13 + 'Registered card/account: '
++ #9 +fPaymentDetails;
+end;
+
+end.

@@ -1,0 +1,5 @@
+Dear Manager, this form is specifically created for you!!
+
+On the "Products" page, you will be able to add new products, edit excisting products and delete products you will no longer be selling.
+
+On the "Transaction History" page you can view all old sales and exchanges. You can also view changes that was made on the database by other managers.
